@@ -5,7 +5,7 @@
  * @author ZEIN_TRY
  * @authorId 903955199469695037
  * @invite gYWSbkhcDy
- * @updateUrl 
+ * @updateUrl https://raw.githubusercontent.com/ZEINTRY11/BetterProfile/main/BetterProfile.plugin.js
  */
 
 /*@cc_on
