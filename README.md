@@ -21,5 +21,8 @@ The BetterProfile plugin enhances the new simplified profile UI by displaying al
 ## Support
 - **Invite**: Join the support server using the invite link: `gYWSbkhcDy`.
 
-## Contact
-For any questions, issues, or suggestions, feel free to contact the me `ZEIN_TRY`.
+## Credits
+Created by ZEIN_TRY, Suggested by jedithfreelance
+<p align="center">
+  Made with ❤️ by ZEIN_TRY
+</p>
