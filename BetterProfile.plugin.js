@@ -59,7 +59,7 @@ function pluginLog(msg) {
 const GuildMemberStore = BdApi.Webpack.getStore("GuildMemberStore");
 const GuildStore = BdApi.Webpack.getStore("GuildStore");
 const SelectedStore = BdApi.Webpack.getStore("SelectedGuildStore");
-const selectedGuildId = SelectedStore.getGuildId();
+let selectedGuildId;
 const UserProfileStore = BdApi.findModuleByProps("getUserProfile");
 const styleText = `
 .descriptionClamp_fc5c48 {
@@ -89,6 +89,23 @@ const styleText = `
   background-color: #555;
 }
 
+.root_c83b44::-webkit-scrollbar {
+  width: 8px;
+}
+
+.root_c83b44::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-auto-thumb);
+}
+
+.root_c83b44::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.root_c83b44::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
 .markup_d6076c {
   text-wrap: pretty !important;
   text-overflow: unset !important;
@@ -112,6 +129,7 @@ module.exports = class BetterProfile {
             );
             aboutMeDiv.innerHTML = `<div class="markup_d6076c"><span class="text-sm/normal_dc00ef" data-text-variant="text-sm/normal"">${bioText}</span></div>`;
         }
+        selectedGuildId = SelectedStore.getGuildId();
           const guildMember = GuildMemberStore.getMember(
             selectedGuildId,
             args[0]
@@ -120,6 +138,7 @@ module.exports = class BetterProfile {
           guildMember.roles.forEach((id) => {
             const role = GuildStore.getRole(selectedGuildId, id);
             if (!role) return;
+            console.log(role.name);
             const RolesElement = document.querySelector(".root_c83b44");
           if (!RolesElement) return;
           if (RolesElement.querySelector("div[aria-label='View All Roles']")) {
