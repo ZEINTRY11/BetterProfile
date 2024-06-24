@@ -24,7 +24,7 @@ The BetterProfile plugin enhances the new simplified profile UI by displaying al
 ## Credits
 Created by ZEIN_TRY, Suggested by jedithfreelance
 
-##Note
+## Note
 
 To remove roles from a member(if you have the permissions to), you have to open the big profile by clickig on the user's profile picture and remove from there
 I cannot do that to the plugin whatsoever, due to BetterDiscord not allowing self-bot
